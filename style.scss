@@ -1,0 +1,38 @@
+// breakpoints:
+$phone: 360px;
+$tablet: 768px;
+$desktop: 1366px;
+$LGdesktop: 1920px;
+
+.nav {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+  }
+
+  &__mobile-bars {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding:0.5em 1em;
+		display: none;
+		@media screen and (max-width: $tablet){
+			display: flex;
+		}
+
+    span {
+      display: block;
+      height:2px;
+      width:20px;
+      margin:2px;
+      background:#888;
+    }
+  }
+
+  &__list {
+    @media screen and (max-width: $tablet){
+			display: none;
+		}
+  }
+}
